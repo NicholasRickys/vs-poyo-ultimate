@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "hey",
+			"indices": [],
+			"name": "rae hey"
+		},
+		{
+			"offsets": [
+				-20,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "rae ignition Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singUP",
+			"indices": [],
+			"name": "rae ignition Sing Note UP"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "rae ignition Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"loop": false,
+			"fps": 15,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "rae ignition Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 15,
+			"anim": "idle",
+			"loop": true,
+			"name": "rae ignition Idle Dance"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/rae ignition",
+	"position": [
+		-160,
+		190
+	],
+	"healthicon": "rae",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		140,
+		180
+	],
+	"camera_position": [
+		200,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

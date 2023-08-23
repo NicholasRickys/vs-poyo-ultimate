@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				72
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singUP",
+			"indices": [],
+			"name": "poyo doxx Sing Note UP"
+		},
+		{
+			"offsets": [
+				-1,
+				54
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "poyo doxx Idle Dance"
+		},
+		{
+			"offsets": [
+				-16,
+				72
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "poyo doxx Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				1,
+				78
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "poyo doxx Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				8,
+				65
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "poyo doxx Sing Note LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/poyo doxx",
+	"position": [
+		-250,
+		0
+	],
+	"healthicon": "poyo",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		182,
+		199
+	],
+	"camera_position": [
+		70,
+		-70
+	],
+	"sing_duration": 4.6,
+	"scale": 1
+}

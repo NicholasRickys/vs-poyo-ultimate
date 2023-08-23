@@ -1,0 +1,32 @@
+{
+	"storyName": "CITY SHOWDOWN (FT. NAFRI)",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"Challenger",
+			"nafri",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "pyoy2",
+	"hiddenUntilUnlocked": false
+}

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="nafri.png">
+<SubTexture name="nafri Idle Dance0000" x="840" y="726" width="426" height="656" frameX="-213" frameY="-160" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Idle Dance0001" x="414" y="726" width="426" height="657" frameX="-213" frameY="-159" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Idle Dance0002" x="0" y="726" width="414" height="664" frameX="-218" frameY="-154" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Idle Dance0003" x="1216" y="0" width="398" height="674" frameX="-225" frameY="-146" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Idle Dance0004" x="826" y="0" width="390" height="676" frameX="-229" frameY="-144" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note LEFT0000" x="1614" y="0" width="467" height="624" frameX="-145" frameY="-186" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note LEFT0001" x="1614" y="624" width="444" height="624" frameX="-164" frameY="-185" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note DOWN0000" x="1106" y="1390" width="336" height="594" frameX="-280" frameY="-211" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note DOWN0001" x="1266" y="726" width="338" height="598" frameX="-281" frameY="-210" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note UP0000" x="0" y="0" width="406" height="726" frameX="-225" frameY="-78" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note UP0001" x="406" y="0" width="420" height="714" frameX="-214" frameY="-87" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note RIGHT0000" x="547" y="1390" width="559" height="601" frameX="-144" frameY="-200" frameWidth="831" frameHeight="907" />
+<SubTexture name="nafri Sing Note RIGHT0001" x="0" y="1390" width="547" height="615" frameX="-140" frameY="-186" frameWidth="831" frameHeight="907" />
+</TextureAtlas>

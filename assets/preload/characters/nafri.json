@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				10
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "nafri Idle Dance",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				10
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singUP",
+			"indices": [],
+			"name": "nafri Sing Note UP"
+		},
+		{
+			"offsets": [
+				-10,
+				17
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "nafri Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				5,
+				10
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "nafri Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				15,
+				13
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "nafri Sing Note DOWN"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/nafri",
+	"position": [
+		-160,
+		10
+	],
+	"healthicon": "nafri",
+	"flip_x": false,
+	"healthbar_colors": [
+		56,
+		56,
+		56
+	],
+	"camera_position": [
+		-10,
+		40
+	],
+	"sing_duration": 6.1,
+	"scale": 0.95
+}

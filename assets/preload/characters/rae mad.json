@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				3
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "rae mad Sing Note RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 15,
+			"name": "rae mad Sing Note UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 15,
+			"name": "rae mad Sing Note DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				5
+			],
+			"anim": "singLEFT",
+			"fps": 15,
+			"name": "rae mad Sing Note LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 15,
+			"name": "rae mad Idle Dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "hey",
+			"fps": 12,
+			"name": "rae hey",
+			"indices": []
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/rae mad",
+	"position": [
+		-150,
+		140
+	],
+	"healthicon": "rae",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		140,
+		180
+	],
+	"camera_position": [
+		200,
+		90
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

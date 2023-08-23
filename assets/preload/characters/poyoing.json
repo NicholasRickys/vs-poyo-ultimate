@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				72
+			],
+			"anim": "singUP",
+			"fps": 11,
+			"name": "poyoing Sing Note UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-1,
+				54
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "poyoing Idle Dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-16,
+				72
+			],
+			"anim": "singRIGHT",
+			"fps": 11,
+			"name": "poyoing Sing Note RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				1,
+				78
+			],
+			"anim": "singDOWN",
+			"fps": 11,
+			"name": "poyoing Sing Note DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				8,
+				65
+			],
+			"anim": "singLEFT",
+			"fps": 11,
+			"name": "poyoing Sing Note LEFT",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/poyoing",
+	"position": [
+		-140,
+		-80
+	],
+	"healthicon": "poyo",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		182,
+		199
+	],
+	"camera_position": [
+		120,
+		80
+	],
+	"sing_duration": 4.6,
+	"scale": 0.8
+}

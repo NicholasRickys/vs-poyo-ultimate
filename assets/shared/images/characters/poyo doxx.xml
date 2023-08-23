@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="poyo doxx.png">
+<SubTexture name="poyo doxx Idle Dance0000" x="0" y="1235" width="348" height="587" frameX="-300" frameY="-195" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Idle Dance0001" x="1777" y="0" width="344" height="591" frameX="-302" frameY="-191" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Idle Dance0002" x="1430" y="600" width="335" height="594" frameX="-309" frameY="-188" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Idle Dance0003" x="693" y="631" width="332" height="601" frameX="-310" frameY="-181" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Idle Dance0004" x="360" y="631" width="333" height="602" frameX="-311" frameY="-180" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note LEFT0000" x="0" y="631" width="360" height="604" frameX="-263" frameY="-195" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note LEFT0001" x="1025" y="631" width="358" height="601" frameX="-271" frameY="-193" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note DOWN0000" x="348" y="1235" width="360" height="587" frameX="-285" frameY="-211" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note DOWN0001" x="1430" y="0" width="347" height="600" frameX="-290" frameY="-194" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note UP0000" x="0" y="0" width="347" height="631" frameX="-295" frameY="-144" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note UP0001" x="719" y="0" width="337" height="625" frameX="-293" frameY="-148" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note RIGHT0000" x="347" y="0" width="372" height="630" frameX="-331" frameY="-154" frameWidth="960" frameHeight="909" />
+<SubTexture name="poyo doxx Sing Note RIGHT0001" x="1056" y="0" width="374" height="620" frameX="-321" frameY="-161" frameWidth="960" frameHeight="909" />
+</TextureAtlas>

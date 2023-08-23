@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				72
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singUP",
+			"indices": [],
+			"name": "x33 doxx Sing Note UP"
+		},
+		{
+			"offsets": [
+				-1,
+				54
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "x33 doxx Idle Dance"
+		},
+		{
+			"offsets": [
+				-16,
+				72
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "x33 doxx Sing Note RIGHT"
+		},
+		{
+			"offsets": [
+				1,
+				78
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "x33 doxx Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				8,
+				65
+			],
+			"loop": false,
+			"fps": 11,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "x33 doxx Sing Note LEFT"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/x33 doxx",
+	"position": [
+		-140,
+		-80
+	],
+	"healthicon": "sarah",
+	"flip_x": false,
+	"healthbar_colors": [
+		155,
+		62,
+		219
+	],
+	"camera_position": [
+		120,
+		80
+	],
+	"sing_duration": 4.6,
+	"scale": 0.8
+}
