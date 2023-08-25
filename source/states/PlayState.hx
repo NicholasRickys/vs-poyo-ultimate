@@ -36,6 +36,7 @@ import tjson.TJSON as Json;
 import cutscenes.CutsceneHandler;
 import cutscenes.DialogueBoxPsych;
 
+
 import states.StoryMenuState;
 import states.FreeplayState;
 import states.editors.ChartingState;
@@ -309,6 +310,8 @@ class PlayState extends MusicBeatState
 		FlxG.cameras.add(camOther, false);
 		grpNoteSplashes = new FlxTypedGroup<NoteSplash>();
 
+		//Look in the stages for the shader code. I am tired
+		
 		FlxG.cameras.setDefaultDrawTarget(camGame, true);
 		CustomFadeTransition.nextCamera = camOther;
 
@@ -384,6 +387,7 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'buh': new states.stages.BuhBackground(); //Week 0 aka doxx
 			case 'cityvspoyo': new states.stages.PoyoBackground(); //Week 1
 			case 'citynafri': new states.stages.NafriBackground(); //Week 2
 		}
