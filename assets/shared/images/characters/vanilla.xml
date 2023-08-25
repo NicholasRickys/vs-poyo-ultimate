@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="vanilla.png">
+<SubTexture name="vanilla Idle Dance0000" x="1750" y="753" width="393" height="739" frameX="-402" frameY="-248" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Idle Dance0001" x="2216" y="751" width="391" height="740" frameX="-403" frameY="-247" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Idle Dance0002" x="1019" y="836" width="395" height="757" frameX="-404" frameY="-230" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Idle Dance0003" x="1354" y="0" width="396" height="773" frameX="-403" frameY="-215" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Idle Dance0004" x="953" y="0" width="401" height="776" frameX="-399" frameY="-212" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note LEFT0000" x="2216" y="0" width="490" height="751" frameX="-189" frameY="-226" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note LEFT0001" x="1750" y="0" width="466" height="753" frameX="-210" frameY="-224" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note DOWN0000" x="478" y="1608" width="479" height="710" frameX="-352" frameY="-279" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note DOWN0001" x="0" y="1608" width="478" height="723" frameX="-367" frameY="-267" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note UP0000" x="0" y="0" width="454" height="836" frameX="-387" frameY="-150" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note UP0001" x="454" y="0" width="499" height="808" frameX="-375" frameY="-176" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note RIGHT0000" x="494" y="836" width="525" height="758" frameX="-440" frameY="-242" frameWidth="1139" frameHeight="1152" />
+<SubTexture name="vanilla Sing Note RIGHT0001" x="0" y="836" width="494" height="772" frameX="-442" frameY="-228" frameWidth="1139" frameHeight="1152" />
+</TextureAtlas>
