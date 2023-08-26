@@ -15,7 +15,7 @@ typedef PlayerType =
 	var name:String;
 
 	@:optional var main:Bool;
-	@:optional var notetype:String;
+	@:optional var notetype:Array<String>;
 
 	@:optional var xdiff:Float;
 	@:optional var ydiff:Float;

@@ -18,9 +18,7 @@ class NafriBackground extends BaseStage
 	}
 	
 	override function createPost()
-		{
-			game.camGame.setFilters([new ShaderFilter(shaderThing1)]);
-		}
-	
-
+	{
+		game.camGame.setFilters([new ShaderFilter(shaderThing1)]);
+	}
 }

@@ -3026,14 +3026,18 @@ class PlayState extends MusicBeatState
 
 		boyfriendGroup.forEachAlive(function(boyfriend)
 		{
-			if (note.noteType == boyfriend.notetype)
+			for (notetype in boyfriend.notetype)
 			{
-				if (!hasResetted)
+				if (note.noteType == notetype)
 				{
-					character = [];
-					hasResetted = true;
-				};
-				character.push(boyfriend);
+					if (!hasResetted)
+					{
+						character = [];
+						hasResetted = true;
+					};
+					character.push(boyfriend);
+					break;
+				}
 			}
 		});
 
@@ -3083,14 +3087,18 @@ class PlayState extends MusicBeatState
 
 			dadGroup.forEachAlive(function(dad)
 			{
-				if (note.noteType == dad.notetype)
+				for (notetype in dad.notetype)
 				{
-					if (!hasResetted)
+					if (note.noteType == notetype)
 					{
-						character = [];
-						hasResetted = true;
-					};
-					character.push(dad);
+						if (!hasResetted)
+						{
+							character = [];
+							hasResetted = true;
+						};
+						character.push(dad);
+						break;
+					}
 				}
 			});
 			var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, note.noteData)))] + altAnim;
@@ -3199,14 +3207,17 @@ class PlayState extends MusicBeatState
 
 				boyfriendGroup.forEachAlive(function(boyfriend)
 				{
-					if (note.noteType == boyfriend.notetype)
+					for (notetype in boyfriend.notetype)
 					{
-						if (!hasResetted)
+						if (note.noteType == notetype) // awesome multi note type system shit lmfao
 						{
-							character = [];
-							hasResetted = true;
+							if (!hasResetted)
+							{
+								character = [];
+								hasResetted = true;
+							}
+							character.push(boyfriend);
 						}
-						character.push(boyfriend);
 					}
 				});
 
