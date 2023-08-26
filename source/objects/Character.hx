@@ -77,7 +77,7 @@ class Character extends FlxSprite
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
 
 	// POYO THINGS
-	public var notetype:Array<String> = [];
+	public var notetype:Array<String> = [''];
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
 	{
 		super(x, y);
