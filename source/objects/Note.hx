@@ -236,8 +236,6 @@ class Note extends FlxSprite
 
 		// trace(prevNote);
 
-		hitTime = FlxG.random.float(-75, 75);
-
 		if(prevNote != null)
 			prevNote.nextNote = this;
 
@@ -287,6 +285,12 @@ class Note extends FlxSprite
 			centerOffsets();
 			centerOrigin();
 		}
+
+		if (isSustainNote)
+			hitTime = this.strumTime
+		else
+			hitTime = this.strumTime + FlxG.random.float(-75, 75);
+
 		x += offsetX;
 	}
 
@@ -421,11 +425,17 @@ class Note extends FlxSprite
 		else
 		{
 			canBeHit = false;
-			var hitPos = Conductor.songPosition + hitTime;
 
-			if (strumTime < hitPos + (Conductor.safeZoneOffset * earlyHitMult))
+			var hitPosition = hitTime;
+			if (prevNote != null)
+				hitPosition = Math.max(hitTime, Math.min(prevNote.strumTime, prevNote.hitTime));
+
+			if (nextNote != null)
+				hitPosition = Math.min(hitTime, Math.max(nextNote.strumTime, nextNote.hitTime));
+	
+			if (hitPosition < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult))
 			{
-				if((isSustainNote && prevNote.wasGoodHit) || strumTime <= hitPos)
+				if((isSustainNote && prevNote.wasGoodHit) || hitPosition <= Conductor.songPosition)
 					wasGoodHit = true;
 			}
 		}

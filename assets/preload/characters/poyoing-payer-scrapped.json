@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "poyo_boppin",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "poyo_boppin"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				10,
+				0,
 				-20
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "poyo_down",
-			"indices": []
+			"indices": [],
+			"name": "poyo_down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				10,
-				90
+				98
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
+			"indices": [],
+			"name": "poyo_up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				1
+			],
+			"anim": "singLEFT",
 			"fps": 24,
-			"name": "poyo_up",
+			"name": "poyo_right",
 			"indices": []
 		},
 		{
-			"offsets": [
-				-11,
-				-11
-			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
 			"loop": false,
-			"name": "poyo_right"
-		},
-		{
 			"offsets": [
-				10,
-				20
+				-15,
+				-10
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "poyo_left"
+			"fps": 24,
+			"name": "poyo_left",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

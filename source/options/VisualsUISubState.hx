@@ -13,6 +13,8 @@ class VisualsUISubState extends BaseOptionsMenu
 	var noteY:Float = 90;
 	var poyo:Character = null;
 	var old_poyo:Character = null;
+	var demo_poyo:Character = null;
+	var glowup_poyo:Character = null;
 	var spritesOption:Int;
 	public function new()
 	{
@@ -32,6 +34,20 @@ class VisualsUISubState extends BaseOptionsMenu
 		old_poyo.dance();
 		old_poyo.animation.finishCallback = function (name:String) old_poyo.dance();
 		old_poyo.visible = false;
+
+		glowup_poyo = new Character(840, 20, 'poyoing-glowup', true);
+		glowup_poyo.setGraphicSize(Std.int(glowup_poyo.width * 0.75));
+		glowup_poyo.updateHitbox();
+		glowup_poyo.dance();
+		glowup_poyo.animation.finishCallback = function (name:String) old_poyo.dance();
+		glowup_poyo.visible = false;
+
+		demo_poyo = new Character(840, 20, 'poyoing-demo1', true);
+		demo_poyo.setGraphicSize(Std.int(demo_poyo.width * 0.75));
+		demo_poyo.updateHitbox();
+		demo_poyo.dance();
+		demo_poyo.animation.finishCallback = function (name:String) old_poyo.dance();
+		demo_poyo.visible = false;
 
 		// for note skins
 		notes = new FlxTypedGroup<StrumNote>();
@@ -113,7 +129,7 @@ class VisualsUISubState extends BaseOptionsMenu
 			\nHowever, is not too late to bring the old sprites back, Please DM Nick (@nicholasrickys on Discord) and get a chance to be in the VS Poyo team.',
 			'poyoSpriteOption',
 			'string',
-			['Current', 'catmania']);
+			['Current', 'catmania', 'Glowup', 'Legacy']);
 		option.onChange = onChangePoyoSprites;
 		spritesOption = optionsArray.length;
 		addOption(option);
@@ -184,6 +200,8 @@ class VisualsUISubState extends BaseOptionsMenu
 		add(notes);
 		add(poyo);
 		add(old_poyo);
+		add(glowup_poyo);
+		add(demo_poyo);
 	}
 
 	override function changeSelection(change:Int = 0)
@@ -194,6 +212,8 @@ class VisualsUISubState extends BaseOptionsMenu
 			var characterMap:Map<String, Character> = new Map<String, Character>();
 			characterMap['Current'] = poyo;
 			characterMap['catmania'] = old_poyo;
+			characterMap['Legacy'] = demo_poyo;
+			characterMap['Glowup'] = glowup_poyo;
 
 			var character = characterMap[ClientPrefs.data.poyoSpriteOption];
 			if (character != null)
@@ -251,18 +271,11 @@ class VisualsUISubState extends BaseOptionsMenu
 
 	function onChangePoyoSprites()
 	{
-		trace(ClientPrefs.data.poyoSpriteOption);
-		if(ClientPrefs.data.poyoSpriteOption == 'catmania')
-		{
-			trace('selected old poyo');
-			poyo.visible = false;
-			old_poyo.visible = true;
-		}
-		else
-		{
-			poyo.visible = true;
-			old_poyo.visible = false;
-		}
+		var sel = ClientPrefs.data.poyoSpriteOption;
+		old_poyo.visible = (sel == 'catmania');
+		poyo.visible = (sel == 'Current');
+		demo_poyo.visible = (sel == 'Legacy');
+		glowup_poyo.visible = (sel == 'Glowup');
 	}
 
 	override function destroy()

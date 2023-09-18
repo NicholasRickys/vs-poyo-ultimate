@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <TextureAtlas imagePath="poyoing.png">
-<SubTexture name="poyoing Idle Dance0000" x="1377" y="855" width="449" height="815" frameX="-137" frameY="-159" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Idle Dance0001" x="924" y="855" width="453" height="817" frameX="-137" frameY="-157" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Idle Dance0002" x="1623" y="0" width="431" height="830" frameX="-145" frameY="-145" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Idle Dance0003" x="1207" y="0" width="416" height="839" frameX="-150" frameY="-137" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Idle Dance0004" x="792" y="0" width="415" height="841" frameX="-150" frameY="-135" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note LEFT0000" x="0" y="855" width="470" height="821" frameX="-105" frameY="-175" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note LEFT0001" x="470" y="855" width="454" height="819" frameX="-129" frameY="-177" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note DOWN0000" x="1070" y="1676" width="528" height="677" frameX="-101" frameY="-336" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note DOWN0001" x="550" y="1676" width="520" height="694" frameX="-109" frameY="-324" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note UP0000" x="0" y="0" width="386" height="855" frameX="-176" frameY="-134" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note UP0001" x="386" y="0" width="406" height="848" frameX="-172" frameY="-138" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note RIGHT0000" x="0" y="1676" width="550" height="783" frameX="-136" frameY="-213" frameWidth="740" frameHeight="1114" />
-<SubTexture name="poyoing Sing Note RIGHT0001" x="2054" y="0" width="517" height="789" frameX="-140" frameY="-207" frameWidth="740" frameHeight="1114" />
+<SubTexture name="poyoing Idle Dance0000" x="1072" y="949" width="399" height="829" frameX="-265" frameY="-151" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Idle Dance0001" x="1471" y="949" width="398" height="829" frameX="-265" frameY="-151" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Idle Dance0002" x="1671" y="0" width="410" height="849" frameX="-260" frameY="-133" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Idle Dance0003" x="1256" y="0" width="415" height="861" frameX="-255" frameY="-121" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Idle Dance0004" x="839" y="0" width="417" height="865" frameX="-254" frameY="-118" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note LEFT0000" x="2081" y="0" width="553" height="827" frameX="-121" frameY="-176" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note LEFT0001" x="533" y="949" width="539" height="832" frameX="-133" frameY="-171" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note DOWN0000" x="562" y="1784" width="446" height="795" frameX="-255" frameY="-206" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note DOWN0001" x="2081" y="827" width="435" height="810" frameX="-264" frameY="-193" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note UP0000" x="0" y="0" width="416" height="949" frameX="-256" frameY="-46" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note UP0001" x="416" y="0" width="423" height="926" frameX="-248" frameY="-66" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note RIGHT0000" x="0" y="1784" width="562" height="822" frameX="-231" frameY="-164" frameWidth="957" frameHeight="1075" />
+<SubTexture name="poyoing Sing Note RIGHT0001" x="0" y="949" width="533" height="835" frameX="-229" frameY="-151" frameWidth="957" frameHeight="1075" />
 </TextureAtlas>

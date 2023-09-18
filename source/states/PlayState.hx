@@ -217,10 +217,17 @@ class PlayState extends MusicBeatState
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
+	// they put ther carhachat adskljlaeci in fanvsp oyop ajsgiojas
+
+	public static var chosenCharacter:String = null;
+
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
 	public static var seenCutscene:Bool = false;
 	public static var deathCounter:Int = 0;
+
+	var scoreGainP1:Int = 350;
+	var scoreGainP2:Int = 350;
 
 	public var defaultCamZoom:Float = 1.05;
 
@@ -261,6 +268,15 @@ class PlayState extends MusicBeatState
 
 	public var precacheList:Map<String, String> = new Map<String, String>();
 	public var songName:String;
+
+	// ermmm,,, week 2 hype mechanic thing idk
+	// this would increase by how good you play throughout the songs
+
+	public var hypeAmount:Float = 0;
+
+	// maybe the downside can be poyo looking more scared and the notes kinda close in
+	// but if is higher than 15 percent then it would be normal
+	// and if is over 75 then the notes would bump a bit
 
 	// Callbacks for stages
 	public var startCallback:Void->Void = null;
@@ -487,6 +503,8 @@ class PlayState extends MusicBeatState
 
 		var poyoSpriteThing:Map<String, String> = new Map<String, String>();
 		poyoSpriteThing['catmania'] = '-scrapped';
+		poyoSpriteThing['Legacy'] = '-demo1';
+		poyoSpriteThing['Glowup'] = '-glowup';
 
 		var extension:String = '';
 
@@ -495,7 +513,7 @@ class PlayState extends MusicBeatState
 
 		var dadNameThing = SONG.player2;
 
-		if (SONG.player2.startsWith('poyoing'))
+		if (SONG.player2.startsWith('poyoing') && !SONG.player2.endsWith('-doxx'))
 			dadNameThing = SONG.player2 + extension;
 
 		if (SONG.characters == null || SONG.characters != null && SONG.characters.player2 == null)
@@ -511,7 +529,7 @@ class PlayState extends MusicBeatState
 			{
 				var dadNameThing = dadData.name;
 
-				if (dadData.name.startsWith('poyoing'))
+				if (dadData.name.startsWith('poyoing') && !dadData.name.endsWith('-doxx'))
 					dadNameThing = dadData.name + extension;
 
 				if (!dadData.main)
@@ -552,12 +570,14 @@ class PlayState extends MusicBeatState
 		}
 
 		var bfNameThing = SONG.player1;
-		if (SONG.player1.startsWith('poyoing'))
+		if (SONG.player1.startsWith('poyoing') && !SONG.player1.endsWith('-doxx'))
 			bfNameThing = SONG.player1 + extension;
 
 		if (SONG.characters == null || SONG.characters != null && SONG.characters.player1 == null)
 		{
-			boyfriend = new Character(BF_X, BF_Y, bfNameThing, true);
+			var name = ((chosenCharacter != null) ? chosenCharacter : bfNameThing);
+
+			boyfriend = new Character(BF_X, BF_Y, name, true);
 			startCharacterPos(boyfriend);
 			boyfriendGroup.add(boyfriend);
 			startCharacterScripts(boyfriend.curCharacter);
@@ -567,7 +587,7 @@ class PlayState extends MusicBeatState
 			for (bfData in SONG.characters.player1)
 			{
 				var bfNameThing = bfData.name;
-				if (bfData.name.startsWith('poyoing'))
+				if (bfData.name.startsWith('poyoing') && !SONG.player1.endsWith('-doxx'))
 					bfNameThing = bfData.name + extension;
 
 				if (!bfData.main)
@@ -599,7 +619,9 @@ class PlayState extends MusicBeatState
 					if (bfData.ydiff == null)
 						y = 0;
 
-					boyfriend = new Character(BF_X + x, BF_Y + y, bfNameThing, true);
+					var name = ((chosenCharacter != null) ? chosenCharacter : bfNameThing);
+
+					boyfriend = new Character(BF_X + x, BF_Y + y, name, true);
 
 					startCharacterPos(boyfriend);
 					boyfriendGroup.add(boyfriend);
@@ -1426,6 +1448,8 @@ class PlayState extends MusicBeatState
 					makeEvent(event, i);
 		}
 
+		var notesDividerP1:Int = 0;
+		var notesDividerP2:Int = 0;
 		for (section in noteData)
 		{
 			for (songNotes in section.sectionNotes)
@@ -1447,6 +1471,12 @@ class PlayState extends MusicBeatState
 
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote);
 				swagNote.mustPress = gottaHitNote;
+
+				if (gottaHitNote)
+					notesDividerP1 += 1;
+				else
+					notesDividerP2 += 1;
+
 				swagNote.sustainLength = songNotes[2];
 				swagNote.gfNote = (section.gfSection && (songNotes[1]<4));
 				swagNote.noteType = songNotes[3];
@@ -1526,6 +1556,9 @@ class PlayState extends MusicBeatState
 		for (event in songData.events) //Event Notes
 			for (i in 0...event[1].length)
 				makeEvent(event, i);
+
+		scoreGainP1 = Std.int(100000 / notesDividerP1);
+		scoreGainP2 = Std.int(100000 / notesDividerP2);
 
 		unspawnNotes.sort(sortByTime);
 		generatedMusic = true;
@@ -2665,7 +2698,7 @@ class PlayState extends MusicBeatState
 		note.ratingMod = daRating.ratingMod;
 		if(!note.ratingDisabled) daRating.hits++;
 		note.rating = daRating.name;
-		score = daRating.score;
+		score = Std.int(scoreGainP1 * daRating.ratingMod);
 
 		if(daRating.noteSplash && !note.noteSplashData.disabled)
 			spawnNoteSplashOnNote(note);
@@ -2690,7 +2723,21 @@ class PlayState extends MusicBeatState
 			antialias = !isPixelStage;
 		};
 
-		var rating = popUpImage(true, FlxG.width - 250, FlxG.height / 2, uiPrefix, uiSuffix, antialias, daRating);
+		var rating = popUpImage(true, 0, 0, uiPrefix, uiSuffix, antialias, daRating);
+
+		rating.scale.set(0.35,0.35);
+		rating.updateHitbox();
+
+		var x = playerStrums.members[Std.int(Math.abs(note.noteData))].getMidpoint().x - (rating.width / 2);
+		rating.x = x;
+
+		var y = playerStrums.members[Std.int(Math.abs(note.noteData))].getMidpoint().y - (rating.height / 2);
+		if (ClientPrefs.data.downScroll)
+			y -= Note.swagWidth;
+		else
+			y += Note.swagWidth;
+
+		rating.y = y;
 
 		var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(uiPrefix + 'combo' + uiSuffix));
 		comboSpr.cameras = [camHUD];
@@ -2700,7 +2747,7 @@ class PlayState extends MusicBeatState
 		comboSpr.velocity.y -= FlxG.random.int(140, 160) * playbackRate;
 		comboSpr.visible = (!ClientPrefs.data.hideHud && showCombo);
 		comboSpr.x += ClientPrefs.data.comboOffset[0];
-		comboSpr.y -= ClientPrefs.data.comboOffset[1];
+		comboSpr.y -= y + 50;
 		comboSpr.antialiasing = antialias;
 		comboSpr.y += 60;
 		comboSpr.velocity.x += FlxG.random.int(1, 10) * playbackRate;
@@ -2716,14 +2763,14 @@ class PlayState extends MusicBeatState
 
 		comboSpr.updateHitbox();
 
-		var seperatedScore:Array<Int> = [];
+		var seperatedScore:String = Std.string(combo);
 
-		if(combo >= 1000) {
+		/*if(combo >= 1000) {
 			seperatedScore.push(Math.floor(combo / 1000) % 10);
 		}
 		seperatedScore.push(Math.floor(combo / 100) % 10);
 		seperatedScore.push(Math.floor(combo / 10) % 10);
-		seperatedScore.push(combo % 10);
+		seperatedScore.push(combo % 10);*/
 
 		var daLoop:Int = 0;
 		var xThing:Float = 0;
@@ -2744,13 +2791,18 @@ class PlayState extends MusicBeatState
 				lastScore.remove(lastScore[0]);
 			}
 		}
-		for (i in seperatedScore)
+		for (v in 0...seperatedScore.length)
 		{
+			var i = Std.parseInt(seperatedScore.charAt(v));
+
 			var numScore:FlxSprite = new FlxSprite().loadGraphic(Paths.image(uiPrefix + 'num' + Std.int(i) + uiSuffix));
 			numScore.cameras = [camHUD];
-			numScore.screenCenter();
-			numScore.x = placement + (43 * daLoop) - 90 + ClientPrefs.data.comboOffset[2];
-			numScore.y += 80 - ClientPrefs.data.comboOffset[3];
+
+			numScore.scale.set(0.35, 0.35);
+			numScore.updateHitbox();
+
+			numScore.x = (x + 65) - ((43*0.35) * (seperatedScore.length / 2)) + ((43*0.35) * v);
+			numScore.y = y - (ClientPrefs.data.downScroll ? 30 : -80);
 			
 			if (!ClientPrefs.data.comboStacking)
 				lastScore.push(numScore);
@@ -3052,14 +3104,19 @@ class PlayState extends MusicBeatState
 
 				var animToPlay:String = singAnimations[Std.int(Math.abs(Math.min(singAnimations.length-1, direction)))] + 'miss' + suffix;
 				char.playAnim(animToPlay, true);
-				
-				if(char != gf && combo > 5 && gf != null && gf.animOffsets.exists('sad'))
-				{
-					gf.playAnim('sad');
-					gf.specialAnim = true;
-				}
 			}
 		}
+
+		if(gf != null && gf.animOffsets.exists('sad'))
+		{
+			gf.playAnim('sad');
+			gf.specialAnim = true;
+		}
+		else if (!gf.animOffsets.exists('sad'))
+		{
+			trace('wtf!!!');
+		}
+
 		vocals.volume = 0;
 	}
 
@@ -3132,16 +3189,31 @@ class PlayState extends MusicBeatState
 			var daRating:Rating = Conductor.judgeNote(ratingsData, noteDiff / playbackRate);
 
 			note.rating = daRating.name;
-			var score:Int = 350;
-			score = daRating.score;
+			var score:Int = Std.int(scoreGainP2 * daRating.ratingMod);
 
 			if(daRating.noteSplash && !note.noteSplashData.disabled)
 				spawnNoteSplashOnNote(note);
 
 			if (!note.isSustainNote)
 				opponent_songScore += score;
-			
-			var rating = popUpImage(false, 30, FlxG.height / 2, '', '', true, daRating);
+
+			var rating = popUpImage(false, 0, 0, '', '', true, daRating);
+
+			rating.scale.set(0.35,0.35);
+			rating.updateHitbox();
+
+			var x = opponentStrums.members[Std.int(Math.abs(note.noteData))].getMidpoint().x - (rating.width / 2);
+			rating.x = x;
+
+			var y = opponentStrums.members[Std.int(Math.abs(note.noteData))].getMidpoint().y - (rating.height / 2);
+			if (ClientPrefs.data.downScroll)
+				y -= Note.swagWidth;
+			else
+				y += Note.swagWidth;
+
+			rating.y = y;
+
+			// rating.x -= (rating.width / 2);
 			updateScore();
 
 			note.kill();

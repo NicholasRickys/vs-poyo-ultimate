@@ -1,7 +1,5 @@
 package states.stages;
 
-import states.stages.objects.*;
-import flixel.system.FlxAssets.FlxShader;
 import shaders.NafriShader;
 import openfl.filters.ShaderFilter;
 
@@ -16,9 +14,10 @@ class NafriBackground extends BaseStage
 		add(new BGSprite('backgrounds/nafricity/crowd', -1200, -850, 0.75, 0.75));
 		add(new BGSprite('backgrounds/nafricity/buss', -1200, -850));
 	}
-	
+	#if !mac
 	override function createPost()
 	{
 		game.camGame.setFilters([new ShaderFilter(shaderThing1)]);
 	}
+	#end
 }
