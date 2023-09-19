@@ -2857,6 +2857,11 @@ class PlayState extends MusicBeatState
 		{
 			if(notes.length > 0 && !boyfriend.stunned && generatedMusic && !endingSong)
 			{
+				// hi guys welcome to my fnf input system tutorial
+
+				// this will be the best input system ever
+
+				// step 1
 				//more accurate hit time for the ratings?
 				var lastTime:Float = Conductor.songPosition;
 				if(Conductor.songPosition >= 0) Conductor.songPosition = FlxG.sound.music.time;
@@ -2921,6 +2926,7 @@ class PlayState extends MusicBeatState
 				spr.resetAnim = 0;
 			}
 			callOnScripts('onKeyPress', [key]);
+			// finished
 		}
 	}
 

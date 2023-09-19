@@ -1,5 +1,6 @@
 package states;
 
+import flixel.addons.transition.FlxTransitionableState;
 import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
@@ -380,6 +381,7 @@ class FreeplayState extends MusicBeatState
 				return;
 			}
 
+			FlxTransitionableState.skipNextTransOut = true;
 			LoadingState.loadAndSwitchState(new states.CharacterSelect());
 
 			FlxG.sound.music.volume = 0;

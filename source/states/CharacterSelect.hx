@@ -52,7 +52,7 @@ class CharacterSelect extends MusicBeatState
 			facts: [
 				'He is Poyo\'s best friend.',
 				'He used to be the best at singing, until Poyo was trained by Boyfriend.',
-				"He's a homosexual gay gay homosexua lfrklhfah hjk"
+				"Poyo taught him how to fight, he also wields a baseball bat like Poyo."
 			],
 			char: null,
 
@@ -183,16 +183,18 @@ class CharacterSelect extends MusicBeatState
 
 	var hasGivenBack:Bool = false;
 
+	var sickBeats:Int = 0;
 	override function beatHit()
 	{
 		super.beatHit();
+		sickBeats++;
 
-		if (curBeat >= 2 && !hasGivenBack)
+		if (sickBeats >= 2 && !hasGivenBack)
 		{
 			coloredfront.makeGraphic(FlxG.width, FlxG.height, FlxColor.WHITE);
 			
-			FlxTween.tween(coloredfront, {alpha: 0}, 1, {ease: FlxEase.linear});
-			FlxTween.tween(nameText, {y: 0}, 1, {ease: FlxEase.cubeOut});
+			FlxTween.tween(coloredfront, {alpha: 0}, 0.35, {ease: FlxEase.linear});
+			FlxTween.tween(nameText, {y: 6}, 1, {ease: FlxEase.cubeOut});
 			setCharShit();
 
 			hasGivenBack = true;

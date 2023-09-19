@@ -119,6 +119,8 @@ class Note extends FlxSprite
 	public var hitsoundChartEditor:Bool = true;
 	public var hitsound:String = 'hitsound';
 
+	var hasInited:Bool = false;
+
 	private function set_multSpeed(value:Float):Float {
 		resizeByRatio(value / multSpeed);
 		multSpeed = value;
@@ -201,6 +203,8 @@ class Note extends FlxSprite
 	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?sustainNote:Bool = false, ?inEditor:Bool = false, ?createdFrom:Dynamic = null)
 	{
 		super();
+		if(prevNote != null)
+			prevNote.nextNote = this;
 
 		antialiasing = ClientPrefs.data.antialiasing;
 		if(createdFrom == null) createdFrom = PlayState.instance;
@@ -236,8 +240,7 @@ class Note extends FlxSprite
 
 		// trace(prevNote);
 
-		if(prevNote != null)
-			prevNote.nextNote = this;
+		hitTime = this.strumTime;
 
 		if (isSustainNote && prevNote != null)
 		{
@@ -285,11 +288,6 @@ class Note extends FlxSprite
 			centerOffsets();
 			centerOrigin();
 		}
-
-		if (isSustainNote)
-			hitTime = this.strumTime
-		else
-			hitTime = this.strumTime + FlxG.random.float(-75, 75);
 
 		x += offsetX;
 	}
@@ -410,6 +408,31 @@ class Note extends FlxSprite
 		} else animation.add(colArray[noteData] + 'Scroll', [noteData + 4], 24, true);
 	}
 
+	function noteInit()
+	{
+		if (isSustainNote)
+			hitTime = this.strumTime
+		else
+		{
+			var randomTime2:Float = 75;
+			var randomTime:Float = -75;
+
+			if (prevNote != null)
+				randomTime = Math.max(randomTime, -Math.abs(this.strumTime - prevNote.hitTime));
+
+			if (nextNote != null)
+			{
+				randomTime2 = Math.min(randomTime2, Math.abs(nextNote.strumTime - this.hitTime));
+			}
+
+			var value = FlxG.random.float(randomTime, randomTime2);
+			trace(value);
+
+			hitTime += value;
+		}
+		hasInited = true;
+	}
+
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -424,14 +447,11 @@ class Note extends FlxSprite
 		}
 		else
 		{
+			if (!hasInited)
+				noteInit();
 			canBeHit = false;
 
 			var hitPosition = hitTime;
-			if (prevNote != null)
-				hitPosition = Math.max(hitTime, Math.min(prevNote.strumTime, prevNote.hitTime));
-
-			if (nextNote != null)
-				hitPosition = Math.min(hitTime, Math.max(nextNote.strumTime, nextNote.hitTime));
 	
 			if (hitPosition < Conductor.songPosition + (Conductor.safeZoneOffset * earlyHitMult))
 			{
