@@ -163,9 +163,9 @@ class Paths
 		return getPath('data/$key.xml', TEXT, library);
 	}
 
-	inline static public function json(key:String, ?library:String)
+	inline static public function json(key:String, ?library:String, ?path:String = 'current')
 	{
-		return getPath('data/$key.json', TEXT, library);
+		return getPath('data/$path/$key.json', TEXT, library);
 	}
 
 	inline static public function shaderFragment(key:String, ?library:String)
@@ -209,23 +209,23 @@ class Paths
 		return file;
 	}
 
-	inline static public function voices(song:String):Any
+	inline static public function voices(song:String, path:String = "current"):Any
 	{
 		#if html5
-		return 'songs:assets/songs/${formatToSongPath(song)}/Voices.$SOUND_EXT';
+		return 'songs:assets/$path/songs/${formatToSongPath(song)}/Voices.$SOUND_EXT';
 		#else
-		var songKey:String = '${formatToSongPath(song)}/Voices';
+		var songKey:String = '$path/${formatToSongPath(song)}/Voices';
 		var voices = returnSound('songs', songKey);
 		return voices;
 		#end
 	}
 
-	inline static public function inst(song:String):Any
+	inline static public function inst(song:String, path:String = 'current'):Any
 	{
 		#if html5
-		return 'songs:assets/songs/${formatToSongPath(song)}/Inst.$SOUND_EXT';
+		return 'songs:assets/$path/songs/${formatToSongPath(song)}/Inst.$SOUND_EXT';
 		#else
-		var songKey:String = '${formatToSongPath(song)}/Inst';
+		var songKey:String = '$path/${formatToSongPath(song)}/Inst';
 		var inst = returnSound('songs', songKey);
 		return inst;
 		#end
@@ -439,8 +439,8 @@ class Paths
 		return modFolders('fonts/' + key);
 	}
 
-	inline static public function modsJson(key:String) {
-		return modFolders('data/' + key + '.json');
+	inline static public function modsJson(key:String, ?path:String = 'current') {
+		return modFolders('data/$path/$key.json');
 	}
 
 	inline static public function modsVideo(key:String) {

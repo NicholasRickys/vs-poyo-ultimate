@@ -26,6 +26,7 @@ class SaveVariables {
 	public var hideHud:Bool = false;
 	public var noteOffset:Int = 0;
 	public var poyoSpriteOption:String = 'Current';
+	public var characterSelect:Bool = false;
 	public var arrowRGB:Array<Array<FlxColor>> = [
 		[0xFFC24B99, 0xFFFFFFFF, 0xFF3C1F56],
 		[0xFF00FFFF, 0xFFFFFFFF, 0xFF1542B7],
@@ -83,6 +84,7 @@ class SaveVariables {
 }
 
 class ClientPrefs {
+
 	public static var data:SaveVariables = null;
 	public static var defaultData:SaveVariables = null;
 

@@ -508,17 +508,9 @@ class PlayState extends MusicBeatState
 
 		var extension:String = '';
 
-		if (poyoSpriteThing[ClientPrefs.data.poyoSpriteOption] != null)
-			extension = poyoSpriteThing[ClientPrefs.data.poyoSpriteOption];
-
-		var dadNameThing = SONG.player2;
-
-		if (SONG.player2.startsWith('poyoing') && !SONG.player2.endsWith('-doxx'))
-			dadNameThing = SONG.player2 + extension;
-
 		if (SONG.characters == null || SONG.characters != null && SONG.characters.player2 == null)
 		{
-			dad = new Character(DAD_X, DAD_Y, dadNameThing);
+			dad = new Character(DAD_X, DAD_Y, SONG.player2);
 			startCharacterPos(dad, true);
 			dadGroup.add(dad);
 			startCharacterScripts(dad.curCharacter);
@@ -527,10 +519,6 @@ class PlayState extends MusicBeatState
 		{
 			for (dadData in SONG.characters.player2)
 			{
-				var dadNameThing = dadData.name;
-
-				if (dadData.name.startsWith('poyoing') && !dadData.name.endsWith('-doxx'))
-					dadNameThing = dadData.name + extension;
 
 				if (!dadData.main)
 				{
@@ -542,7 +530,7 @@ class PlayState extends MusicBeatState
 					if (dadData.ydiff == null)
 						y = 0;
 
-					var dad = new Character(DAD_X + x, DAD_Y + y, dadNameThing);
+					var dad = new Character(DAD_X + x, DAD_Y + y, dadData.name);
 
 					if (dadData.notetype != null)
 						dad.notetype = dadData.notetype;
@@ -561,7 +549,7 @@ class PlayState extends MusicBeatState
 					if (dadData.ydiff == null)
 						y = 0;
 
-					dad = new Character(DAD_X + x, DAD_Y + y, dadNameThing);
+					dad = new Character(DAD_X + x, DAD_Y + y, dadData.name);
 					startCharacterPos(dad, true);
 					dadGroup.add(dad);
 					startCharacterScripts(dad.curCharacter);
@@ -569,13 +557,9 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		var bfNameThing = SONG.player1;
-		if (SONG.player1.startsWith('poyoing') && !SONG.player1.endsWith('-doxx'))
-			bfNameThing = SONG.player1 + extension;
-
 		if (SONG.characters == null || SONG.characters != null && SONG.characters.player1 == null)
 		{
-			var name = ((chosenCharacter != null) ? chosenCharacter : bfNameThing);
+			var name = ((chosenCharacter != null) ? chosenCharacter : SONG.player1);
 
 			boyfriend = new Character(BF_X, BF_Y, name, true);
 			startCharacterPos(boyfriend);
@@ -586,10 +570,6 @@ class PlayState extends MusicBeatState
 		{
 			for (bfData in SONG.characters.player1)
 			{
-				var bfNameThing = bfData.name;
-				if (bfData.name.startsWith('poyoing') && !SONG.player1.endsWith('-doxx'))
-					bfNameThing = bfData.name + extension;
-
 				if (!bfData.main)
 				{
 					var x:Float = bfData.xdiff;
@@ -600,7 +580,7 @@ class PlayState extends MusicBeatState
 					if (bfData.ydiff == null)
 						y = 0;
 
-					var bf = new Character(BF_X + x, BF_Y + y, bfNameThing, true);
+					var bf = new Character(BF_X + x, BF_Y + y, bfData.name, true);
 
 					if (bfData.notetype != null)
 						bf.notetype = bfData.notetype;
@@ -619,7 +599,7 @@ class PlayState extends MusicBeatState
 					if (bfData.ydiff == null)
 						y = 0;
 
-					var name = ((chosenCharacter != null) ? chosenCharacter : bfNameThing);
+					var name = ((chosenCharacter != null) ? chosenCharacter : bfData.name);
 
 					boyfriend = new Character(BF_X + x, BF_Y + y, name, true);
 

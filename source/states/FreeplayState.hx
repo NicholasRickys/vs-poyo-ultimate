@@ -382,7 +382,7 @@ class FreeplayState extends MusicBeatState
 			}
 
 			FlxTransitionableState.skipNextTransOut = true;
-			LoadingState.loadAndSwitchState(new states.CharacterSelect());
+			LoadingState.loadAndSwitchState(ClientPrefs.data.characterSelect ? new states.CharacterSelect() : new PlayState());
 
 			FlxG.sound.music.volume = 0;
 					

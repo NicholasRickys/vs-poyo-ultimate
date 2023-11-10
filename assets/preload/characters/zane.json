@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-7
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "zane right"
+		},
+		{
+			"offsets": [
+				0,
+				-10
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singUP",
+			"indices": [],
+			"name": "zane up"
+		},
+		{
+			"offsets": [
+				-10,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "zane down"
+		},
+		{
+			"offsets": [
+				0,
+				5
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "zane left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 12,
+			"anim": "idle",
+			"indices": [],
+			"name": "zane idle"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/zane",
+	"position": [
+		-250,
+		-130
+	],
+	"healthicon": "zane",
+	"flip_x": false,
+	"healthbar_colors": [
+		80,
+		140,
+		180
+	],
+	"camera_position": [
+		120,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}

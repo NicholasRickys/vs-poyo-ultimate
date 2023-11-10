@@ -1,24 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TextureAtlas imagePath="GF.png">
-<SubTexture name="GF Dancing Beat0000" x="3083" y="1157" width="746" height="1156" frameX="-95" frameY="-27" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0001" x="3083" y="0" width="747" height="1157" frameX="-94" frameY="-26" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0002" x="0" y="2323" width="750" height="1156" frameX="-88" frameY="-27" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0003" x="750" y="2323" width="746" height="1156" frameX="-83" frameY="-27" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0004" x="1507" y="1163" width="767" height="1159" frameX="-50" frameY="-24" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0005" x="2274" y="1163" width="794" height="1159" frameX="-19" frameY="-24" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0006" x="1496" y="0" width="792" height="1160" frameX="-19" frameY="-23" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0007" x="2288" y="0" width="795" height="1160" frameX="-16" frameY="-23" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0008" x="1566" y="3479" width="796" height="1104" frameX="-17" frameY="-79" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0009" x="3148" y="3479" width="798" height="1098" frameX="-21" frameY="-85" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0010" x="2362" y="3479" width="786" height="1103" frameX="-38" frameY="-80" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0011" x="0" y="1163" width="754" height="1160" frameX="-77" frameY="-23" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0012" x="754" y="1163" width="753" height="1160" frameX="-83" frameY="-23" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0013" x="747" y="0" width="749" height="1161" frameX="-89" frameY="-22" frameWidth="900" frameHeight="1200" />
-<SubTexture name="GF Dancing Beat0014" x="0" y="0" width="747" height="1163" frameX="-95" frameY="-20" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0000" x="4606" y="0" width="780" height="1144" frameX="-46" frameY="-39" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0001" x="784" y="3479" width="782" height="1142" frameX="-45" frameY="-41" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0002" x="1496" y="2323" width="781" height="1147" frameX="-47" frameY="-36" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0003" x="0" y="3479" width="784" height="1143" frameX="-45" frameY="-40" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0004" x="3830" y="0" width="776" height="1146" frameX="-50" frameY="-37" frameWidth="900" frameHeight="1200" />
-<SubTexture name="gf sad0005" x="2277" y="2323" width="781" height="1147" frameX="-47" frameY="-36" frameWidth="900" frameHeight="1200" />
+<TextureAtlas imagePath="GF_assets.png">
+<SubTexture name="GF Dancing Beat0000" x="2257" y="0" width="391" height="623" frameX="-511" frameY="-536" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0001" x="0" y="1945" width="389" height="620" frameX="-509" frameY="-539" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0002" x="382" y="1300" width="393" height="639" frameX="-512" frameY="-520" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0003" x="0" y="0" width="381" height="652" frameX="-530" frameY="-507" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0004" x="1118" y="0" width="380" height="649" frameX="-532" frameY="-509" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0005" x="0" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0006" x="1541" y="1300" width="385" height="626" frameX="-540" frameY="-533" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0007" x="2257" y="1246" width="387" height="622" frameX="-541" frameY="-537" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0008" x="775" y="1300" width="382" height="634" frameX="-538" frameY="-525" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0009" x="0" y="1300" width="382" height="645" frameX="-533" frameY="-514" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0010" x="381" y="0" width="381" height="650" frameX="-531" frameY="-508" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="GF Dancing Beat0011" x="0" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0000" x="2257" y="623" width="389" height="623" frameX="-549" frameY="-536" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0001" x="1157" y="1300" width="384" height="632" frameX="-551" frameY="-527" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0002" x="1878" y="646" width="376" height="630" frameX="-546" frameY="-529" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0003" x="762" y="0" width="356" height="650" frameX="-545" frameY="-508" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0004" x="1878" y="0" width="379" height="646" frameX="-534" frameY="-512" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0005" x="380" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0006" x="380" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0007" x="760" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0008" x="1498" y="0" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0009" x="1498" y="648" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
+<SubTexture name="gf sad0010" x="0" y="652" width="380" height="648" frameX="-532" frameY="-510" frameWidth="1280" frameHeight="1280" />
 </TextureAtlas>
